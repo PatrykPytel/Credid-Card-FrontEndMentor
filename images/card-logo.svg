@@ -1,0 +1,22 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+<!-- ikona do karty credytowej 84 47 
+    </section>
+    <section class="User-input">
+      <div class="cardholder">
+        <p class="points">Cardholder Name</p>
+        <div class='eg'><button type="button" class="es">e.g. Jane Appleseed</button></div>
+      </div><div class="e.g-card-number">
+      <p class="points">Card Number</p>
+      <div class="eg"><button type="button" class="es">e.g. 1234 5678 9123 0000</button></div>
+      </div><div class="date-cvc">
+        <div class="inline">
+          <span>Exp. Date (MM/YY)</span>
+          <span>CVC</span>
+        </div><div class="date-cvc-flex"> 
+          <button type="button" class="flex-items">MM</button>                <!-- class="flex-items"> -->
+          <button type="button" class="flex-items">YY</button>              <!--   class="flex-items"> -->
+          <button type="button" class="flex-items" id="cvc">e.g. 123</button>        <!--  class="flex-items" id="cvc"> -->
+        </div>
+      </div>
+      <button type="button" class="buttonstandard">Confirm</button>
+    </section>-->
