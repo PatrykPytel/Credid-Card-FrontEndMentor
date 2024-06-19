@@ -56,3 +56,4 @@ function changecolor0(element) {
    // p.style.borderColor = "hsl(270, 3%, 87%)";
     p = element;
 }
+//zrob by sprawdzalo poprawnosc po confirmie nie w trakcie
