@@ -41,23 +41,23 @@
     <form action="results.html" method="GET" class="User-input" >
       <div class="top-Input" >
         <label for="Cardholder-Name">Cardholder Name</label><br>
-        <input type="text" id="name" oninput="change0()" onclick="changecolor0(this)" name="Cardholder-Name" placeholder="e.g. Jane Applessed"  required >  <br> <!--pattern="^[A-Z]{1}[a-z]{2,15}\s[A-Z]{1}[a-z]{2,16}$"  pattern="^[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$" pattern="^[0]{1}[1-9]{1}||[1]{1}[0-2]{1}$" pattern="^[0-9]{2}$" pattern="^[0-9]{3}$"--->
+        <input type="text" id="name" oninput="change0()" onclick="changecolor0(this)" name="Cardholder-Name" placeholder="e.g. Jane Applessed" pattern="^[A-Z]{1}[a-z]{2,15}\s[A-Z]{1}[a-z]{2,16}$" required >  <br> <!--pattern="^[A-Z]{1}[a-z]{2,15}\s[A-Z]{1}[a-z]{2,16}$"--->
         <p class="error" id="errorName"></p>
         <label for="Card-Number">Card Number</label><br>
-        <input type="text" id="numbers" oninput="change1()" name="Card-Number" onclick="changecolor0(this)" placeholder="e.g. 1234 5678 9123 0000"  required minlength="19" maxlength="19"> <br>
+        <input type="text" id="numbers" oninput="change1()" name="Card-Number" onclick="changecolor0(this)" placeholder="e.g. 1234 5678 9123 0000" pattern="^[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$" required minlength="19" maxlength="19"> <br>
         <p class="error" id="errorchild"></p>
       </div> 
       <label for="MM">Exp. Date</label>
       <label for="YY" class="label-YY"> (MM/YY)</label>
       <label for="CVC" class="label-CVC">CVC</label><br>
       <div class="date-cvc-flex">
-        <input type="text" name="MM" placeholder="MM" id="mm" class="flex-items" oninput="change2()" onclick="changecolor0(this)"  required minlength="2" maxlength="2"> 
-        <input type="text" name="YY" placeholder="YY" id="yy" class="flex-items" oninput="change3()" onclick="changecolor0(this)"  required minlength="2" maxlength="2">
-        <input type="text" name="CVC"  id="cvc" class="flex-items" oninput="change4()" placeholder="e.g. 123" onclick="changecolor0(this)" required minlength="3" maxlength="3"  > <br>
+        <input type="text" name="MM" placeholder="MM" id="mm" class="flex-items" oninput="change2()" onclick="changecolor0(this)" pattern="^[0]{1}[1-9]{1}||[1]{1}[0-2]{1}$" required minlength="2" maxlength="2"> 
+        <input type="text" name="YY" placeholder="YY" id="yy" class="flex-items" oninput="change3()" onclick="changecolor0(this)" pattern="^[0-9]{2}$" required minlength="2" maxlength="2">
+        <input type="text" name="CVC"  id="cvc" class="flex-items" oninput="change4()" placeholder="e.g. 123" onclick="changecolor0(this)" required minlength="3" maxlength="3" pattern="^[0-9]{3}$" > <br>
         <p class="error" id="errorYM"></p>
         <p class="error" id="errorCVC"></p>
       </div>
-      <button  type="submit">Confirm</button> <!---type="submit"-->
+      <button type="submit" onclick="verify()">Confirm</button> <!---type="submit"-->
     </form>
   </main>
   <script src="script.js"></script>

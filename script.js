@@ -39,10 +39,13 @@ function changecolor0(element) {
     if(p.style.borderColor!="red"){
         p.style.borderColor = "hsl(270, 3%, 87%)";
     }
+
    // p.style.borderColor = "hsl(270, 3%, 87%)";
     p = element;
 }
-function verify(reg, x) {
+
+
+function verify() {
     const reg = new RegExp("^[A-Z]{1}[a-z]{2,15}\\s[A-Z]{1}[a-z]{2,16}$"); 
     const reg1 = new RegExp("^[0-9]{4}\\s[0-9]{4}\\s[0-9]{4}\\s[0-9]{4}$"); 
     const reg2 = new RegExp("^[0]{1}[1-9]{1}|[1]{1}[0-2]{1}$");
@@ -50,49 +53,46 @@ function verify(reg, x) {
     const reg4 = new RegExp("^[0-9]{3}$"); 
     const p0 = document.getElementById("errorName");
     const p1 = document.getElementById("errorchild");
-    const p2 = document.getElementById("errorMY");
+    const p2 = document.getElementById("errorYM");
     const p3 = document.getElementById("errorCVC");
     const x0 = document.getElementById("name");
     const x1 = document.getElementById("numbers");
     const x2= document.getElementById("mm");
     const x3 = document.getElementById("yy");
     const x4 = document.getElementById("cvc");
-    if (!(reg.test(x.value))) { 
+    if(!(reg.test(x0.value))) { 
         x0.style.borderColor = "red";
-        if(len(x0.value)==0) { 
+        if(x0.value.length==0)  {
             p0.innerHTML = "Can't be blank";
-        }else { 
+        }else  { 
             p0.innerHTML = "Wrong format, letters only";
         }
     }
-    if (!(reg1.test(x1.value))) { 
+    if(!(reg1.test(x1.value))) { 
         x1.style.borderColor = "red";
-        if(len(x1.value)==0) { 
+        if(x1.value.length==0)  {
             p1.innerHTML = "Can't be blank";
-        }else { 
+        }else  { 
             p1.innerHTML = "Wrong format, numbers only";
         }
     }
-    if (!(reg2.test(x2.value)) || !(reg3.test(x3.value))) {
-        if(!(reg2.test(x2.value)))  { 
-            x2.style.borderColor = "red"
-        }
-        if(!(reg3.test(x3.value)))  { 
-            x3.style.borderColor = "red"
-        }      
-        if(len(x2.value)==0 || len(x3.value)==0) { 
-            p2.innerHTML = "Can't be blank";
-        }else { 
-            p2.innerHTML = "Wrong format, numbers only";
+    if(!(reg4.test(x4.value))) { 
+        x4.style.borderColor = "red";
+        if(x4.value.length==0)  {
+            p3.innerHTML = "Can't be blank";
+        }else  { 
+            p3.innerHTML = "Wrong format";
         }
     }
-    if (!(reg4.test(x4.value))) { 
-        x4.style.borderColor = "red";
-        if(len(x4.value)==0) { 
-            p3.innerHTML = "Can't be blank";
-        }else { 
-            p3.innerHTML = "Wrong format, letters only";
-        }    
+    if(!(reg2.test(x2.value))) { 
+        x2.style.borderColor = "red";
+    }
+    if(!(reg3.test(x3.value))) { 
+        x3.style.borderColor = "red";
+    }
+    if((x2.value.length == 0) || (x3.value.length == 0))  { 
+        p2.innerHTML = "Can't be blank";
+    }else  { 
+        p2.innerHTML = "Wrong format, try again"
     }
 }
-    
