@@ -86,14 +86,20 @@
     bottom: 20px;
     font-size: 0.65rem;
   }
-  #top, #bottom {
+  #top {
     position: absolute;
+    top:26px;
+    right: 20px;
+  }
+  #bottom{
+    position: absolute;
+    bottom:-45px;
+    /* left:20px; */
+    right: 70px;
   }
   .User-input {
     color:hsl(278, 68%, 11%);
-    position: absolute;
-    right: -8rem;
-
+    padding: 1.5rem; 
   }
   .date-cvc-flex {
     width: 100%;
@@ -116,6 +122,7 @@
     padding-left: 1rem;
     margin-top: 6px;
   } 
+  
   .error  {
     position: absolute;
     top:22.2rem;
@@ -130,7 +137,7 @@
     top:34rem;
   }
   #errorCVC  { 
-    right:410px;
+    right:90px;
   }
   /* .es { */
     /* margin-left: 1rem; */
@@ -209,6 +216,9 @@
       top:55%; 
       right:-35%;
     }
+    #errorCVC  { 
+      right:410px;
+    }
     #bottom {
       bottom:55%;
       right: -15%;
@@ -236,5 +246,5 @@
     }
     .label-CVC {
       margin-left: 7rem;
-    } 
+    }
   }

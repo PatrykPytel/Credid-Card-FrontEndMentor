@@ -67,7 +67,11 @@ function verify() {
         }else  { 
             p0.innerHTML = "Wrong format, letters only";
         }
+    }else{ 
+        x0.style.borderColor = "#DEDFDD";
+        p0.innerHTML = "";
     }
+    
     if(!(reg1.test(x1.value))) { 
         x1.style.borderColor = "red";
         if(x1.value.length==0)  {
@@ -75,6 +79,9 @@ function verify() {
         }else  { 
             p1.innerHTML = "Wrong format, numbers only";
         }
+    }    else { 
+        x1.style.borderColor = "#DEDFDD";
+        p1.innerHTML = "";
     }
     if(!(reg4.test(x4.value))) { 
         x4.style.borderColor = "red";
@@ -83,16 +90,26 @@ function verify() {
         }else  { 
             p3.innerHTML = "Wrong format";
         }
-    }
-    if(!(reg2.test(x2.value))) { 
-        x2.style.borderColor = "red";
-    }
-    if(!(reg3.test(x3.value))) { 
-        x3.style.borderColor = "red";
+    } else { 
+        x4.style.borderColor = "#DEDFDD ";
+        p3.innerHTML = "";
     }
     if((x2.value.length == 0) || (x3.value.length == 0))  { 
         p2.innerHTML = "Can't be blank";
-    }else  { 
+    }   
+    else  { 
         p2.innerHTML = "Wrong format, try again"
     }
+    if(!(reg2.test(x2.value))) { 
+        x2.style.borderColor = "red";
+    }else{
+        x2.style.borderColor = "#DEDFDD";
+        p2.innerHTMl = "";
+    }
+    if(!(reg3.test(x3.value))) { 
+        x3.style.borderColor = "red";
+    }else{
+        x3.style.borderColor = "#DEDFDD";
+        p2.innerHTML = "";
+    }	
 }
