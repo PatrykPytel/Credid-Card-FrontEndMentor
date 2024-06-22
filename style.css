@@ -218,6 +218,10 @@
       padding: 15rem;
       margin-left: 5rem;
       margin-right: 5rem;
+      
+    }
+    .User-input { 
+      right: 0rem;
     }
     .back-card , .front-card, .credid-Cards {
       transform:scale(1.35);
